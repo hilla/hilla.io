@@ -88,7 +88,8 @@ body {
 
 header {
   background-color: #ff8d0c;
-  height: 40vh;
+  min-height: 40vh;
+  padding-bottom: 6vh;
   /* https://kilianvalkhof.com/2017/design/sloped-edges-with-consistent-angle-in-css/ */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
@@ -97,12 +98,8 @@ header {
   justify-content: center;
 }
 
-.headline {
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  flex-grow: 0;
-  /* flex-wrap: wrap; */
+.headline * {
+  float: left;
 }
 
 main {
@@ -131,7 +128,7 @@ h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #fff;
 }
 
