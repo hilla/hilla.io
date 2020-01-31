@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %} {%include "head.html" %} {% endblock head %}
+
+<body>
+  {%block header %}{%include "header.html" %}{% endblock header %}
+  <main role="main">
+    <div class="middle">
+      <h1>{{ page.title }}</h1>
+      {%if page.taxonomies and page.taxonomies.tags |length > 0 %}
+      <span class="tags">{%for tag in page.taxonomies.tags%}<a href="/tags/{{ tag }}">#{{ tag }}</a> {%endfor%}</span>
+      {%endif%}
+      {%if page.date %}<span class="date">{{ page.date }}</span> {%endif%}
+      {{ page.content | safe }}
+    </div>
+  </main>
+  {% block footer %}{%include "footer.html" %}{% endblock footer %}
+</body>
+
+</html>
