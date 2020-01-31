@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://hilla.netlify.com/* https://hilla.io/:splat 301!
