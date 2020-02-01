@@ -77,6 +77,12 @@ body {
   padding: 0;
 }
 
+/* prettier-ignore */
+h1, h2, h3, h4, h5, h6, p, sup, ul, ol {
+  /* Catch-all vertical margins for block elements */
+  margin: 1rem 0;
+}
+
 #container {
   min-height: 100%;
   position: relative;
@@ -109,11 +115,11 @@ header {
 .headline h1, .headline img {
   /* TODO: don't float, use grid or flex */
   float: left;
+  margin: 0;
 }
 
 main {
   background-color: #eae2b7;
-  padding-top: 2rem;
   padding-bottom: 4rem; /* 2rem + Height of the footer */
   color: black;
   box-sizing: border-box;
@@ -123,12 +129,16 @@ main {
 #card {
   display: block;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.75rem;
   background-color: #ff8d0c;
   color: white;
-  width: 14rem;
+  width: 12rem;
   box-sizing:border-box;
+  margin-top: 2rem;
   padding: 1rem;
+  p {
+    margin: 0;
+  }
 }
 
 footer {
@@ -138,6 +148,9 @@ footer {
   height: 2rem; /* Height of the footer */
   background: #ff8d0c;
   color: white;
+  p {
+    margin: 0;
+  }
 }
 
 h1,
@@ -153,22 +166,19 @@ h6 {
 
 header h1 {
   color: #fff;
+  font-size: 3.5rem;
+
 }
 
 #navigation a {
   color: white;
   font-size: 1.25rem;
+  margin: 0 1rem 0 0;
 }
 
 h1 {
-  font-size: 3.5rem;
-}
-
-main h1 {
   font-size: 2.5rem;
 }
-
-
 
 hr {
   border: none;

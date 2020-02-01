@@ -3,11 +3,13 @@
 {% block head %} {%include "head.html" %} {% endblock head %}
 
 <body>
-  {%block header %}{%include "header.html" %}{% endblock header %}
-  <main role="main">
-    {%block content %} {{ section.content | safe }}{% endblock content %}
-  </main>
-  {% block footer %}{%include "footer.html" %}{% endblock footer %}
+  <div id="container">
+    {%block header %}{%include "header.html" %}{% endblock header %}
+    <main role="main">
+      {%block content %} {{ section.content | safe }}{% endblock content %}
+    </main>
+    {% block footer %}{%include "footer.html" %}{% endblock footer %}
+  </div>
 </body>
 
 </html>
