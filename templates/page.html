@@ -6,14 +6,12 @@
   <div id="container">
     {%block header %}{%include "header.html" %}{% endblock header %}
     <main role="main">
-      <div class="middle">
-        <h1>{{ page.title }}</h1>
-        {%if page.taxonomies and page.taxonomies.tags |length > 0 %}
-        <span class="tags">{%for tag in page.taxonomies.tags%}<a href="/tags/{{ tag }}">#{{ tag }}</a> {%endfor%}</span>
-        {%endif%}
-        {%if page.date %}<span class="date">{{ page.date }}</span> {%endif%}
-        {{ page.content | safe }}
-      </div>
+      <h1>{{ page.title }}</h1>
+      {%if page.taxonomies and page.taxonomies.tags |length > 0 %}
+      <span class="tags">{%for tag in page.taxonomies.tags%}<a href="/tags/{{ tag }}">#{{ tag }}</a> {%endfor%}</span>
+      {%endif%}
+      {%if page.date %}<span class="date">{{ page.date }}</span> {%endif%}
+      {{ page.content | safe }}
     </main>
     {% block footer %}{%include "footer.html" %}{% endblock footer %}
   </div>
