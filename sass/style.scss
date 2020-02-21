@@ -59,7 +59,6 @@ header, main, footer {
   grid-column: full;
 }
 
-
 header {
   background-color: $orange;
   color: white;
@@ -186,7 +185,6 @@ th, td {
 .post_item {
   list-style-type: none;
   margin: 1rem 0;
-  display: flex;
 }
 
 .post_link {
